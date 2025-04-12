@@ -10,7 +10,7 @@ Dataset-Preparation:
 
 Clustering:
 - **unsuccessful_k_means_clustering.py**: This is our approach to cluster the manually labeled sentences using a simple k-means approach. Unfortunately, this approach was unsuccessful because clusters were being made based on similarity and not the labels. Therefore, we moved to an apporach that seeds the clustering with known labels. 
-- **unsuccessful_constrained_clustering.py**: This is our approach to cluster the manually labeled sentences using nearest centroid classification. Unfortunately, this approach was unsuccessful because our labeled datset is highly imbalaced (92.39% of sentences are labeled "None"). We proceeded using data augmentation.
+- **unsuccessful_constrained_clustering.py**: This is our approach to cluster the manually labeled sentences using nearest centroid classification. Unfortunately, this approach was unsuccessful because our labeled dataset is highly imbalanced (92.39% of sentences are labeled "None"). We proceeded using data augmentation.
 
 Fine-Tuning:
 - **finetuning.py**: This is where we fine-tune GPT-2. Because GPT-2 is originally a language model and not a classifier, we use Hugging Face’s `GPT2ForSequenceClassification`. We then train GPT-2 on our synthetic dataset (60/20/20 split). This script updates ALL of GPT-2's weights.

@@ -9,7 +9,7 @@ Dataset-Preparation:
 - **extract-sentences.py**: The policies are html documents. Therefore, we wrote this python script to extract the sentences from each privacy policy and clean/process the text. The result is a csv file with three rows: document number, sentence number, and sentence. 
 
 Clustering:
-- **unsuccessful_k_means_clustering.py**: This is our approach to cluster the manually labeled sentences using a simple k-means approach. Unfortunately, this approach was unsuccessful because clusters were being made based on similarity and not the labels. Therefore, we moved to an apporach that seeds the clustering with known labels. 
+- **unsuccessful_k_means_clustering.py**: This is our approach to cluster the manually labeled sentences using a simple k-means approach. Unfortunately, this approach was unsuccessful because clusters were being made based on similarity and not the labels. Therefore, we moved to an approach that seeds the clustering with known labels. 
 - **unsuccessful_constrained_clustering.py**: This is our approach to cluster the manually labeled sentences using nearest centroid classification. Unfortunately, this approach was unsuccessful because our labeled dataset is highly imbalanced (92.39% of sentences are labeled "None"). We proceeded using data augmentation.
 
 Fine-Tuning:

@@ -13,6 +13,6 @@ Clustering:
 - **unsuccessful_constrained_clustering.py**: This is our approach to cluster the manually labeled sentences using nearest centroid classification. Unfortunately, this approach was unsuccessful because our labeled datset is highly imbalaced (92.39% of sentences are labeled "None"). We proceeded using data augmentation.
 
 Fine-Tuning:
-- **finetuning.py**: This is where we fine-tune GPT-2. Because GPT-2 is originally a language model and not a classifier, we use Hugging Face’s GPT2ForSequenceClassification. We then train GPT-2 on our synthetic dataset (60/20/20 split).
-- **evaluation.py**: Next, we load our fine-tuned GPT-2 model (i.e., DeceptGPT) and evaluate it on real-world data. We use the manually-labeled set of ~1,000 sentences.
+- **finetuning.py**: This is where we fine-tune GPT-2. Because GPT-2 is originally a language model and not a classifier, we use Hugging Face’s `GPT2ForSequenceClassification`. We then train GPT-2 on our synthetic dataset (60/20/20 split).
+- **evaluation.py**: Next, we load our fine-tuned GPT-2 model (i.e., DeceptGPT) and evaluate it on real-world data. We use our manually-labeled set of ~1,000 sentences.
 - **comparison.py**: Additionally, we evaluate the vanilla GPT-2 model on the manually-labeled set of ~1,000 sentences. This allows us to compare DeceptGPT's performance to a baseline.

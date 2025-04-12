@@ -53,6 +53,10 @@ tokenizer.pad_token = tokenizer.eos_token
 model = GPT2ForSequenceClassification.from_pretrained(model_name, num_labels=num_labels)
 model.config.pad_token_id = tokenizer.pad_token_id
 
+# Uncomment to freeze all GPT-2 transformer layers
+# for param in model.transformer.parameters():
+#     param.requires_grad = False
+
 # Max sentence is 169 char < 128 tokens ~ 170 char
 # Tokenization function
 def tokenize_function(example):
